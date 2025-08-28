@@ -1,0 +1,57 @@
+{
+  "name": "zotero-pdf-translate",
+  "version": "1.0.25",
+  "description": "PDF translation for Zotero built-in PDF reader.",
+  "config": {
+    "addonName": "Zotero PDF Translate",
+    "addonID": "zoteropdftranslate@euclpts.com",
+    "addonRef": "zoteropdftranslate",
+    "prefsPrefix": "extensions.zotero.ZoteroPDFTranslate",
+    "addonInstance": "PDFTranslate",
+    "releasepage": "https://github.com/windingwind/zotero-pdf-translate/releases/latest/download/zotero-pdf-translate.xpi",
+    "updaterdf": "https://raw.githubusercontent.com/windingwind/zotero-pdf-translate/main/update.json"
+  },
+  "main": "src/index.ts",
+  "scripts": {
+    "build-dev": "cross-env NODE_ENV=development node scripts/build.js",
+    "build-prod": "cross-env NODE_ENV=production node scripts/build.js",
+    "build": "concurrently -c auto npm:build-prod npm:tsc",
+    "tsc": "tsc --noEmit",
+    "start-z6": "node scripts/start.js --z 6",
+    "start-z7": "node scripts/start.js --z 7",
+    "start": "node scripts/start.js",
+    "stop": "node scripts/stop.js",
+    "restart-dev-z6": "npm run build-dev && npm run stop && npm run start-z6",
+    "restart-dev-z7": "npm run build-dev && npm run stop && npm run start-z7",
+    "restart-prod": "npm run build-prod && npm run stop && npm run start",
+    "restart": "npm run restart-dev",
+    "release": "release-it",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/windingwind/zotero-pdf-translate.git"
+  },
+  "author": "windingwind",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/windingwind/zotero-pdf-translate/issues"
+  },
+  "homepage": "https://github.com/windingwind/zotero-pdf-translate#readme",
+  "dependencies": {
+    "jsencrypt": "~3.3.2",
+    "zotero-plugin-toolkit": "^2.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "~18.16.1",
+    "compressing": "~1.9.0",
+    "concurrently": "~8.0.1",
+    "cross-env": "~7.0.3",
+    "esbuild": "~0.17.18",
+    "minimist": "~1.2.8",
+    "release-it": "~15.10.1",
+    "replace-in-file": "~6.3.5",
+    "typescript": "~5.0.4",
+    "zotero-types": "~1.0.13"
+  }
+}
