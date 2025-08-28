@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@types/node": "~18.16.1",
-    "compressing": "~1.9.0",
+    "compressing": "~2.0.0",
     "concurrently": "~8.0.1",
     "cross-env": "~7.0.3",
     "esbuild": "~0.17.18",
