@@ -45,6 +45,6 @@ pref(
   "__prefsPrefix__.cnkiRegex",
   "(查看名企职位.+?https://dict.cnki.net[a-zA-Z./]+.html?)",
 );
-pref("__prefsPrefix__.cnkiSplitSecond", 1);
+pref("__prefsPrefix__.cnkiSplitSecond", 0.3);
 pref("__prefsPrefix__.cnkiUseSplit", true);
 pref("__prefsPrefix__.cnkiMaxLength", 800);

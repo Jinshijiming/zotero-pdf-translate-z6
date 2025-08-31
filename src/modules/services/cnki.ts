@@ -74,9 +74,9 @@ export default <TranslateTaskProcessor>async function (data) {
       translatedText += (await processTranslation(chunk)) + " ";
       data.result = translatedText.trim();
       // 动态刷新 UI
-      addon.hooks.onReaderTabPanelRefresh();
+      // addon.hooks.onReaderTabPanelRefresh();
       await new Promise((resolve) =>
-        Zotero.setTimeout(resolve, splitSecond * maxlength)
+        Zotero.setTimeout(resolve, splitSecond * 1000)
       );
     }
   } else {
