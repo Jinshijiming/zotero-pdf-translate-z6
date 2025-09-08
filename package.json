@@ -51,7 +51,7 @@
     "minimist": "1.2.8",
     "release-it": "15.10.1",
     "replace-in-file": "6.3.5",
-    "typescript": "5.0.4",
+    "typescript": "5.9.2",
     "zotero-types": "1.0.13"
   }
 }
